@@ -15,7 +15,11 @@ public class Main {
     public static void main(String[] args) {
         /*System.out.println("Bismillah tubesnya sukses dan lancar");
         System.out.println("tetew");*/
+<<<<<<< HEAD
         System.out.println("tetew tejnvkfjlfbkglfkl;fhkkgfhjtewww"); 
+=======
+        System.out.println("sumber air su dehjbkdlkvdjgkkat"); 
+>>>>>>> ea58071014332f370460ea76fa0e8a041134dde9
     
         login a = new login();
         a.setVisible(true);
