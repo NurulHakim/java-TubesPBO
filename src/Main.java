@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         /*System.out.println("Bismillah tubesnya sukses dan lancar");
         System.out.println("tetew");*/
-        System.out.println("tetew tetewww"); 
+        System.out.println("tetew tejnvkfjlfbtewww"); 
     
         login a = new login();
         a.setVisible(true);
