@@ -1,3 +1,6 @@
+
+import gui.login;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,8 +13,14 @@
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bismillah tubesnya sukses dan lancar");
-        System.out.println("tetew");
+        /*System.out.println("Bismillah tubesnya sukses dan lancar");
+        System.out.println("tetew");*/
+        System.out.println("tetewhghjh"); 
+    
+        login a = new login();
+        a.setVisible(true);
+        
+        
     }
     
 }
