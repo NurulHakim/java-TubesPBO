@@ -9,6 +9,11 @@ package gui;
  *
  * @author ASUS
  */
-public class menu {
+public class Menu {
+    
+    public static void main(String[] args) {
+        System.out.println("Hari ini 5/1/2019");
+        
+    }
     
 }
