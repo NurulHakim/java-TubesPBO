@@ -33,7 +33,8 @@ public class login extends javax.swing.JFrame {
             if(rs.next()){
                 if("ADMIN".equals(rs.getString("hak_akses"))){
                     JOptionPane.showMessageDialog(null, "Welcome ADMIN !!");
-                    new Pemilik().setVisible(true);
+                    Pemilik X = new Pemilik();
+                    X.setVisible(true);
                 } else if("PENJUAL".equals(rs.getString("hak_akses"))){
                     JOptionPane.showMessageDialog(null, "Welcome penjuallll !!");
                     new Penjual().setVisible(true);
