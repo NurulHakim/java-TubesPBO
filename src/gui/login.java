@@ -9,13 +9,46 @@ package gui;
  *
  * @author ASUS
  */
-public class login extends javax.swing.JFrame {
+import java.sql.*;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 
-    /**
-     * Creates new form login
-     */
+
+public class login extends javax.swing.JFrame {
+    String user = "root";
+    String pwd = "";
+    String url = "jdbc:mysql://localhost/login";
+    
     public login() {
         initComponents();
+        setLocationRelativeTo(this);
+        
+    }
+    
+    void Login(){
+        try {
+            Connection con = DriverManager.getConnection(url,user,pwd);
+            Statement st = (Statement) con.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM login WHERE username='" + jtuser.getText() + "' AND password='"+jtpass.getText()+"' " );
+            if(rs.next()){
+                if("ADMIN".equals(rs.getString("hak_akses"))){
+                    JOptionPane.showMessageDialog(null, "Welcome ADMIN !!");
+                    new Pemilik().setVisible(true);
+                } else if("PENJUAL".equals(rs.getString("hak_akses"))){
+                    JOptionPane.showMessageDialog(null, "Welcome penjuallll !!");
+                    new Penjual().setVisible(true);
+                } else if("PEMBELI".equals(rs.getString("hak_akses"))){
+                    JOptionPane.showMessageDialog(null, "Selama datang di doi !!");
+                    new BeliDanusan().setVisible(true);
+                } else {
+                    
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Login Failed");
+            }
+        } catch (Exception e) {
+            
+        }
     }
 
     /**
@@ -53,10 +86,7 @@ public class login extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +180,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        Login();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
