@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+
 import java.sql.*;
 
 public class Koneksi {
@@ -25,6 +26,8 @@ public class Koneksi {
             Class.forName("com.mysql.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost:3306/login","root","");
             stm = (Statement) con.createStatement();
+          
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "koneksi gagal "+e.getMessage());
         }
