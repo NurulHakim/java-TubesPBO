@@ -48,7 +48,7 @@ public class login extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Login Failed");
             }
         } catch (Exception e) {
-            
+            System.out.println(e.getMessage());
         }
     }
 
