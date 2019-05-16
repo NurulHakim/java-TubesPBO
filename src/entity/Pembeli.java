@@ -13,7 +13,8 @@ public class Pembeli {
     char nim;
     String username, password, nama_pembeli, jk, lokasi, prodi;
     int angkatan;
-    //gambar
+     
+    
     
     public String getUsername(){
         return username;
