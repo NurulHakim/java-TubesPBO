@@ -11,32 +11,23 @@ package Koneksi;
  */
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-public class Koneksi {
-    private  Connection conn;
+public class koneksi {
+    Connection con;
     
-    public Koneksi(){
-        
-        MysqlDataSource mds = new MysqlDataSource();
-        mds.setUser("root");
-        mds.setPassword("");
-        mds.setDatabaseName("infinitycourse");
-        
+    public Connection getData (){
         try {
-            conn = mds.getConnection();
-        } catch (SQLException ex) {
-           JOptionPane.showMessageDialog(null,"KONEKSI GAGAL "+ex.getMessage());
+            con = DriverManager.getConnection("jdbc:mysql://localhost/danusan","root", "");
         }
+        
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Gagal Terhubung Database!");
+        }
+        
+        return con;
     }
-    public Connection getKoneksi(){
-        return this.conn;
-    }
-    
-    public static void main(String[] args) {
-        Koneksi k = new Koneksi();
-    }
-    
 }
 
