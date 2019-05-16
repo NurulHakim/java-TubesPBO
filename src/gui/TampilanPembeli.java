@@ -9,6 +9,9 @@ package gui;
  *
  * @author ASUS
  */
+
+//import gui.DanusanICOSITER;
+
 public class TampilanPembeli extends javax.swing.JFrame {
 
     /**
@@ -17,6 +20,8 @@ public class TampilanPembeli extends javax.swing.JFrame {
     public TampilanPembeli() {
         initComponents();
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,20 +32,18 @@ public class TampilanPembeli extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+
+        jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setBackground(new java.awt.Color(204, 0, 204));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("1. Danusan ICOSITER");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pembeli/20190508_131456_0001.png"))); // NOI18N
-        jLabel2.setMinimumSize(new java.awt.Dimension(1920, 1080));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pembeli/20190515_215913_0001.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -82,6 +85,9 @@ public class TampilanPembeli extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
+
+
+
 }
