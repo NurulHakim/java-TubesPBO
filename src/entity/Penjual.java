@@ -12,7 +12,7 @@ package entity;
 public class Penjual {
     String nama_penjual, lokasi, username, password;
     int id_penjual;
-    //gambar
+    
     
     public String getNama(){
         return nama_penjual;
