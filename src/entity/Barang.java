@@ -14,6 +14,7 @@ public class Barang {
     double harga;
     //gambar
     byte[] gambar;
+    int id_barang;
     
     public byte[] getGambar(){
         return gambar;
@@ -37,6 +38,14 @@ public class Barang {
     
     public void setHarga(double harga){
         this.harga = harga;
+    }
+    
+    public int getIdBarang(){
+        return id_barang;
+    }
+    
+    public void setIdBarang(int id_barang){
+        this.id_barang = id_barang;
     }
     
     
