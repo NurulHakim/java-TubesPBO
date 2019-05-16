@@ -16,6 +16,14 @@ public class Barang {
     byte[] gambar;
     int id_barang;
     
+    public Barang(int id_barang, String nama_barang, double harga, byte[] gambar){
+      this.id_barang = id_barang;
+      this.nama_barang = nama_barang;
+      this.harga = harga;
+      this.gambar = gambar;
+    }
+
+    
     public byte[] getGambar(){
         return gambar;
     }
