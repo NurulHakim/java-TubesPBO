@@ -13,5 +13,31 @@ public class Barang {
     String nama_barang;
     double harga;
     //gambar
+    byte[] gambar;
+    
+    public byte[] getGambar(){
+        return gambar;
+    }
+    
+    public void setGambar(byte[] gambar){
+       this.gambar = gambar;
+    }
+    
+    public String getNamabarang(){
+        return nama_barang;
+    }
+    
+    public void setNamabarang(String nama_barang){
+        this.nama_barang = nama_barang;
+    }
+    
+     public double getHarga(){
+        return harga;
+    }
+    
+    public void setHarga(double harga){
+        this.harga = harga;
+    }
+    
     
 }
