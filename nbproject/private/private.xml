@@ -3,23 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/Orderan.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/EditDaftarJualan.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/entity/Pembayaran.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/KonfirmasiPesanan.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/TampilanPembeli.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/entity/Admin.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/entity/Barang.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/Interface/BarangDao.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/BeliDanusan.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/LamanCancel.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/TampilanAwal.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/Implementasi/BarangDaoImplements.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/entity/Pembeli.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/LamanExit.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/Penjual.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/entity/Penjual.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gambar/pembeli/20190508_131456_0001.png</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Penjual.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Pemilik.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/Program/Koneksi.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/login.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Pengaturan.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Orderan.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/EditDaftarJualan.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/TampilanPembeli.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/DaftarAkun.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/Koneksi/Koneksi.java</file>
+            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/formlogin.java</file>
         </group>
     </open-files>
 </project-private>
