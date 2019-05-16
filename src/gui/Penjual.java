@@ -71,11 +71,13 @@ public class Penjual extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Orderan O = new Orderan();
+        O.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        EditDaftarJualan x = new EditDaftarJualan();
+        x.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
