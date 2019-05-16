@@ -222,7 +222,6 @@ public class DaftarAkun extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane.showMessageDialog(this, "Anda Berhasil Mendaftar");
-        System.exit(0);
         login X = new login();
         X.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
