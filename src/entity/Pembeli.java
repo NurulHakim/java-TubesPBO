@@ -10,9 +10,9 @@ package entity;
  * @author ASUS
  */
 public class Pembeli {
-    char nim;
-    String username, password, nama_pembeli, jk, lokasi, prodi;
-    int angkatan;
+    int id_pembeli;
+    String username, password, nama_pembeli, jk, lokasi;
+    
      
     
     
@@ -32,19 +32,19 @@ public class Pembeli {
         this.password = password;
     }
     
-    public double getNim(){
-        return nim;
+    public int getIdPembeli(){
+        return id_pembeli;
     }
     
-    public void setNim(char nim){
-        this.nim = nim;
+    public void setIdPembeli(int id_pembeli){
+        this.id_pembeli = id_pembeli;
     }
     
-    public String getNama(){
+    public String getNamaPembeli(){
         return nama_pembeli;
     }
     
-    public void setNama(String nama){
+    public void setNamaPembeli(String nama){
         this.nama_pembeli = nama_pembeli;
     }
     
@@ -64,19 +64,7 @@ public class Pembeli {
         this.lokasi = lokasi;
     }
     
-    public String getProdi(){
-        return prodi;
-    }
     
-    public void setProdi(String prodi){
-        this.prodi = prodi;
-    }
     
-    public int getAngkatan(){
-        return angkatan;
-    }
     
-    public void setAngkatan(int angkatan){
-        this.angkatan = angkatan;
-    }
 }
