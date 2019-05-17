@@ -20,7 +20,7 @@ public class koneksi {
     
     public Connection getData (){
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost/danusan","root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/uhuy","root", "");
         }
         
         catch (Exception e){
