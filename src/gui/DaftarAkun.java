@@ -52,7 +52,7 @@ public class DaftarAkun extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(550, 450));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Virda\\Music\\cover\\doi.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/doi.jpg"))); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
