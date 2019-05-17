@@ -29,7 +29,7 @@ public class datapembayaran extends javax.swing.JFrame {
      public void tampilan (){
        DefaultTableModel model = (DefaultTableModel)  pembayaran.getModel();
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/uhuy", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/danusan", "root", "");
             Statement stat = conn.createStatement();
             ResultSet res = stat.executeQuery("Select * from pembayaran");
             System.out.println("");
