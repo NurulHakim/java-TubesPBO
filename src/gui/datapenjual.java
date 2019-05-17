@@ -32,9 +32,9 @@ public class datapenjual extends javax.swing.JFrame {
         public void tampilan (){
        DefaultTableModel model = (DefaultTableModel)  penjual.getModel();
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/uhuy", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/danusan", "root", "");
             Statement stat = conn.createStatement();
-            ResultSet res = stat.executeQuery("Select * from penjual");
+            ResultSet res = stat.executeQuery("Select * from penjual2");
             System.out.println("");
             while(res.next()){
                 Object[] obj=new Object[5];
