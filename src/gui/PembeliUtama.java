@@ -5,9 +5,7 @@
  */
 package gui;
 
-import Program.Koneksi;
-import entity.Barang;
-import java.sql.Connection;
+import Koneksi.koneksi;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -34,7 +32,7 @@ public class PembeliUtama extends javax.swing.JFrame {
         model = new DefaultTableModel();
         uhuy.setModel(model);
         
-        model.addColumn("ID Produk");
+       // model.addColumn("ID Produk");
         model.addColumn("Nama Produk");
         model.addColumn("Harga");
         model.addColumn("Stok");
@@ -47,7 +45,7 @@ public class PembeliUtama extends javax.swing.JFrame {
         model.getDataVector().removeAllElements();
         model.fireTableDataChanged();
         
-       Koneksi kon = new Koneksi();
+       koneksi kon = new koneksi();
        kon.getData();
         
         try {
@@ -58,10 +56,10 @@ public class PembeliUtama extends javax.swing.JFrame {
             
             while (rs.next()){
                 Object[] obj = new Object[4];
-                    obj[0] = rs.getString("id_barang");
-                    obj[1] = rs.getString("nama_barang");
-                    obj[2] = rs.getString("harga");
-                    obj[3] = rs.getString("stok");
+                    //obj[0] = rs.getString("id_barang");
+                    obj[0] = rs.getString("nama_barang");
+                    obj[1] = rs.getString("harga");
+                    obj[2] = rs.getString("stok");
                     
                     
                     model.addRow(obj);
@@ -106,18 +104,20 @@ public class PembeliUtama extends javax.swing.JFrame {
 
         uhuy.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3"
             }
         ));
+        uhuy.setAlignmentX(1.0F);
+        uhuy.setAlignmentY(1.0F);
         jScrollPane2.setViewportView(uhuy);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 440, 90));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 450, 90));
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
