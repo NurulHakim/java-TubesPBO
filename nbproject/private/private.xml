@@ -3,24 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/Program/Koneksi.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/Program/KoneksiPembeli.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/TampilanPembeli.java</file>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/Dao/BarangDaoImplements.java</file>
-=======
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Penjual.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Pemilik.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/Program/Koneksi.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/login.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Pengaturan.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/Orderan.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/EditDaftarJualan.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/TampilanPembeli.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/DaftarAkun.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/Koneksi/Koneksi.java</file>
-            <file>file:/C:/Users/Virda/Documents/GitHub/java-TugasBesarPBO/src/gui/formlogin.java</file>
->>>>>>> d3c2e13b4048026f5a49e9807989a9aa685f2521
+            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/EditDaftarJualan.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/KonfirmasiBeli.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/java-TugasBesarPBO/src/gui/PembeliUtama.java</file>
         </group>
     </open-files>
 </project-private>
