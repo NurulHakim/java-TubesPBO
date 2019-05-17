@@ -245,6 +245,7 @@ public class DaftarAkun extends javax.swing.JFrame {
         }else if(jcpembeli.isSelected()){
               try {
             koneksi kon = new koneksi();
+            kon.getData();
             
             String sql = "INSERT INTO pembeli VALUES ('"+jtnama.getText()+"','"
                                                     +jtusername.getText()+"','"
