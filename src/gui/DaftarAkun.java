@@ -5,6 +5,8 @@
  */
 package gui;
 
+import Koneksi.koneksi;
+import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
 /**
@@ -35,17 +37,17 @@ public class DaftarAkun extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        jcpenjual = new javax.swing.JCheckBox();
+        jcpembeli = new javax.swing.JCheckBox();
+        jtnama = new javax.swing.JTextField();
+        jtusername = new javax.swing.JTextField();
+        jtemail = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jtdanus = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jtpass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(550, 450));
@@ -70,35 +72,31 @@ public class DaftarAkun extends javax.swing.JFrame {
         jLabel5.setText("email");
         jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCheckBox1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jCheckBox1.setText("Penjual");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        jcpenjual.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jcpenjual.setText("Penjual");
+        jcpenjual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                jcpenjualActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jCheckBox2.setText("Pembeli");
+        jcpembeli.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jcpembeli.setText("Pembeli");
 
-        jTextField1.setBackground(new java.awt.Color(153, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtnama.setBackground(new java.awt.Color(153, 255, 255));
+        jtnama.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jtnama.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField2.setBackground(new java.awt.Color(153, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jTextField2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtusername.setBackground(new java.awt.Color(153, 255, 255));
+        jtusername.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jtusername.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField3.setBackground(new java.awt.Color(153, 255, 255));
-        jTextField3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jTextField3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        jTextField4.setBackground(new java.awt.Color(153, 255, 255));
-        jTextField4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jtemail.setBackground(new java.awt.Color(153, 255, 255));
+        jtemail.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jtemail.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jtemailActionPerformed(evt);
             }
         });
 
@@ -106,9 +104,9 @@ public class DaftarAkun extends javax.swing.JFrame {
         jLabel6.setText("Danusan ");
         jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jTextField5.setBackground(new java.awt.Color(153, 255, 255));
-        jTextField5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jTextField5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jtdanus.setBackground(new java.awt.Color(153, 255, 255));
+        jtdanus.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jtdanus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("*wajib diisi oleh penjual");
@@ -125,6 +123,14 @@ public class DaftarAkun extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("Cancel");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jtpass.setBackground(new java.awt.Color(51, 255, 255));
+        jtpass.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -142,14 +148,15 @@ public class DaftarAkun extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox1)
+                            .addComponent(jtemail, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcpembeli)
+                            .addComponent(jtnama, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcpenjual)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jtpass, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtdanus, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel7)))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -165,28 +172,28 @@ public class DaftarAkun extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtnama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtpass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtdanus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(38, 38, 38)
-                .addComponent(jCheckBox1)
+                .addComponent(jcpenjual)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox2)
+                .addComponent(jcpembeli)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -212,19 +219,71 @@ public class DaftarAkun extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void jcpenjualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcpenjualActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_jcpenjualActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtemailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jtemailActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(this, "Anda Berhasil Mendaftar");
+        if(jcpenjual.isSelected()){
+            try {
+            koneksi kon = new koneksi();
+            
+            String sql = "INSERT INTO penjual VALUES ('"+jtnama.getText()+"','"
+                                                    +jtusername.getText()+"','"
+                                                    +jtpass.getText()+"','"+jtdanus.getText()+
+                                                    "','"+jtemail.getText()+"')";
+            PreparedStatement pst=(PreparedStatement) kon.getData().prepareStatement(sql);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Anda Berhasil Mendaftar");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else if(jcpembeli.isSelected()){
+              try {
+            koneksi kon = new koneksi();
+            kon.getData();
+            
+            String sql = "INSERT INTO pembeli VALUES ('"+jtnama.getText()+"','"
+                                                    +jtusername.getText()+"','"
+                                                    +jtpass.getText()+"','"+
+                                                    "','"+jtemail.getText()+"')";
+            PreparedStatement pst=(PreparedStatement) kon.getData().prepareStatement(sql);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Anda Berhasil Mendaftar");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+            }
+        }else{
+            System.out.println("Silahkan coba lagi");
+        }
+        
         login X = new login();
         X.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int jawab = JOptionPane.showOptionDialog(this, 
+                    "Batal Mendaftar?", 
+                    "Sudah punya akun?", 
+                    JOptionPane.YES_NO_OPTION, 
+                    JOptionPane.QUESTION_MESSAGE, null, null, null);
+    
+    if(jawab == JOptionPane.YES_OPTION){
+        login x = new login();
+        x.setVisible(true);
+        this.setVisible(false);
+    }if(jawab == JOptionPane.NO_OPTION){
+        DaftarAkun x = new DaftarAkun();
+        x.setVisible(true);
+        this.setVisible(false);
+    }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,8 +323,6 @@ public class DaftarAkun extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -274,10 +331,12 @@ public class DaftarAkun extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JCheckBox jcpembeli;
+    private javax.swing.JCheckBox jcpenjual;
+    private javax.swing.JTextField jtdanus;
+    private javax.swing.JTextField jtemail;
+    private javax.swing.JTextField jtnama;
+    private javax.swing.JPasswordField jtpass;
+    private javax.swing.JTextField jtusername;
     // End of variables declaration//GEN-END:variables
 }
