@@ -30,7 +30,7 @@ public class databarang extends javax.swing.JFrame {
     public void tampilan (){
        DefaultTableModel model = (DefaultTableModel)  barang.getModel();
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/uhuy", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/udanusan", "root", "");
             Statement stat = conn.createStatement();
             ResultSet res = stat.executeQuery("Select * from barang");
             System.out.println("");
