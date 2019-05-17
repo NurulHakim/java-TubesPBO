@@ -10,9 +10,9 @@ package entity;
  * @author ASUS
  */
 public class Penjual {
-    String nama_penjual, lokasi, username, password;
+    String nama_penjual, username, password;
     int id_penjual;
-    //gambar
+    
     
     public String getNama(){
         return nama_penjual;
@@ -22,13 +22,6 @@ public class Penjual {
         this.nama_penjual = nama_penjual;
     }
     
-    public String getLokasi(){
-        return lokasi;
-    }
-    
-    public void setLokasi(String lokasi){
-        this.lokasi = lokasi;
-    }
     
     public String getUsername(){
         return username;
