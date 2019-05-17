@@ -18,13 +18,10 @@ import javax.swing.JOptionPane;
 
 
 public class login extends javax.swing.JFrame {
-    String user = "root";
-    String pwd = "";
-    String url = "jdbc:mysql://localhost;/login";
+    
     
     public login() {
         initComponents();
-        setLocationRelativeTo(this);
         
     }
     
@@ -52,16 +49,17 @@ public class login extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jpass = new javax.swing.JPasswordField();
-        jcpilih = new javax.swing.JComboBox<>();
+        jcom = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(550, 450));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Virda\\Music\\cover\\ghhh.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/ghhh.png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Virda\\Music\\cover\\LOGIN.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/LOGIN.png"))); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,9 +99,11 @@ public class login extends javax.swing.JFrame {
         jpass.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jpass.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jcpilih.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jcpilih.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jcpilih.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jcom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Penjual", "Pembeli" }));
+        jcom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setText("Select user");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -127,28 +127,31 @@ public class login extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(82, 82, 82))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(78, 78, 78)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jcpilih, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(78, 78, 78)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(76, 76, 76)
+                .addComponent(jcom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jcpilih, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(54, 54, 54)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxuser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                    .addComponent(jcom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtxuser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                     .addComponent(jpass))
@@ -196,42 +199,16 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       String x=jtxuser.getText();
-            try {
-				koneksi kon = new koneksi();
-				kon.getData();
-				
-                ResultSet userAdmin =kon.getData().createStatement().executeQuery("SELECT * FROM admin where USERNAME='"+ x +"' AND PASS='"+String.valueOf(jpass.getText())+"'");
-                ResultSet userPenjual =kon.getData().createStatement().executeQuery("SELECT * FROM penjual where USERNAME='"+ x +"' AND PASS='"+String.valueOf(jpass.getText())+"'");
-                ResultSet userPembeli =kon.getData().createStatement().executeQuery("SELECT * FROM pembeli where USERNAME='"+ x +"' AND PASS='"+String.valueOf(jpass.getText())+"'");
-                
-                if(userAdmin.next()){               
-                    String username=userAdmin.getString("username");
-                    Pemilik y = new Pemilik();
-                    y.setVisible(true);
-                    this.setVisible(false);
-                }else if(userPenjual.next()){
-                 String username = userPenjual.getString("username");
-                 Penjual y = new Penjual();
-                 y.setVisible(true);
-                 this.setVisible(false);
-                }else if(userPembeli.next()){
-                 String username = userPembeli.getString("username");
-                 PembeliUtama y = new PembeliUtama();
-                 y.setVisible(true);
-                 this.setVisible(false);
-                }else if(x.equals("admin") && String.valueOf(jpass.getText()).equals("admin")){
-                    String username=userAdmin.getString("username");
-                    Pemilik y = new Pemilik();
-                    y.setVisible(true);
-                    this.setVisible(false);
-                    dispose();
-                }else{
-                    JOptionPane.showMessageDialog(rootPane, "Periksa kembali username dan password yang dimasukkan");
-                }
-            } catch (SQLException ex) {
-                
-            }
+    String uname = jtxuser.getText();
+    String pass = jpass.getText();
+    String option = jcom.getSelectedItem().toString();
+    
+    if (uname.equals("")||pass.equals("")||option.equals("pilih")){
+        JOptionPane.showMessageDialog(rootPane,"kosong","Error",1);
+    }else{
+        koneksi x = new koneksi();
+        x.getData();
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -278,8 +255,9 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JComboBox<String> jcpilih;
+    private javax.swing.JComboBox<String> jcom;
     private javax.swing.JPasswordField jpass;
     private javax.swing.JTextField jtxuser;
     // End of variables declaration//GEN-END:variables
