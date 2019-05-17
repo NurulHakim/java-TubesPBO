@@ -100,6 +100,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbcancel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jbcancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/tombol2.jpg"))); // NOI18N
         jbcancel.setText("Cancel");
         jbcancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbcancel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -111,6 +112,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         getContentPane().add(jbcancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 140, 30));
 
         jbdel.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jbdel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/tombol2.jpg"))); // NOI18N
         jbdel.setText("- Delete");
         jbdel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbdel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -123,6 +125,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         getContentPane().add(jbdel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 110, 30));
 
         jbdone.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jbdone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/tombol2.jpg"))); // NOI18N
         jbdone.setText("Done");
         jbdone.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbdone.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -134,6 +137,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         getContentPane().add(jbdone, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 540, 140, 30));
 
         jbinsert.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jbinsert.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/tombol2.jpg"))); // NOI18N
         jbinsert.setText("+ Tambah Menu");
         jbinsert.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jbinsert.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -173,6 +177,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 90, 30));
 
         jbupdate.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jbupdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/tombol2.jpg"))); // NOI18N
         jbupdate.setText("Edit Menu");
         jbupdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
         jbupdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -223,6 +228,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 590, 80));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GambarPenjual/mmLc2Qs.jpg"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 709, 576));
 
         pack();
@@ -250,12 +256,16 @@ public class EditDaftarJualan extends javax.swing.JFrame {
          int selectedOption = JOptionPane.showConfirmDialog(null,
         "Apakah anda yakin ingin membatalkan nya ?", "Cancel",JOptionPane.YES_NO_OPTION);
          if (selectedOption == JOptionPane.YES_OPTION) {
-            System.exit(0);
+            dispose();
+            Penjual x = new Penjual();
+             x.setVisible(true);
          }else{
              EditDaftarJualan X = new EditDaftarJualan();
              X.setVisible(true);
 
          }
+         
+         
     }//GEN-LAST:event_jbcancelActionPerformed
 
     private void jbdoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbdoneActionPerformed
