@@ -30,16 +30,16 @@ public class databarang extends javax.swing.JFrame {
     public void tampilan (){
        DefaultTableModel model = (DefaultTableModel)  barang.getModel();
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/doi", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/uhuy", "root", "");
             Statement stat = conn.createStatement();
             ResultSet res = stat.executeQuery("Select * from barang");
             System.out.println("");
             while(res.next()){
-                Object[] obj=new Object[5];
-                obj[0]=res.getString("id_barang");
-                obj[1]=res.getString("nama_barang");
-                obj[2]=res.getString("harga");
-                obj[3]=res.getString("gambar_barang");
+                Object[] obj=new Object[3];
+                obj[0]=res.getString("nama_barang");
+                obj[1]=res.getString("harga");
+                obj[2]=res.getString("stok");
+                
                 
                
                 
