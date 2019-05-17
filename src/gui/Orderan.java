@@ -9,8 +9,13 @@ package gui;
  *
  * @author Virda
  */
+import Koneksi.koneksi;
 import java.awt.event.KeyEvent;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class Orderan extends javax.swing.JFrame {
 
@@ -20,7 +25,40 @@ public class Orderan extends javax.swing.JFrame {
     public Orderan() {
         initComponents();
     }
-
+        
+    public void tampil(){
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Pembeli");
+        model.addColumn("Menu Makanan");
+        model.addColumn("Jumllah Beli");
+        model.addColumn("Total Pembayaran");
+        
+        jTable1.setModel(model);
+        
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
+        
+        try {
+            koneksi kon = new koneksi();
+            kon.getData();
+            
+            Statement stat = (Statement) kon.getData().createStatement();
+            String sql = "Select * username from transaksi where ";
+            ResultSet rs = stat.executeQuery(sql);
+            
+            while (rs.next()){
+                Object[] obj = new Object[4];
+                    obj[0] = rs.getString("Pembeli");
+                    obj[1] = rs.getString("Menu Makanan");
+                    obj[2] = rs.getString("Jumlah Beli");
+                    obj[3] = rs.getString("Total Pembayaran");
+                    
+                    model.addRow(obj);
+            }
+        }catch (SQLException e){
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -118,12 +156,21 @@ public class Orderan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtampilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtampilActionPerformed
-        
+        tampil();
     }//GEN-LAST:event_jbtampilActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        dispose();
-        
+        int selectedOption = JOptionPane.showConfirmDialog(null,
+        "Apakah anda yakin ingin membatalkan nya ?", "Cancel",JOptionPane.YES_NO_OPTION);
+         if (selectedOption == JOptionPane.YES_OPTION) {
+            dispose();
+            Penjual x = new Penjual();
+             x.setVisible(true);
+         }else{
+             Orderan X = new Orderan();
+             X.setVisible(true);
+
+         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
