@@ -35,10 +35,11 @@ public class databarang extends javax.swing.JFrame {
             ResultSet res = stat.executeQuery("Select * from barang");
             System.out.println("");
             while(res.next()){
-                Object[] obj=new Object[3];
-                obj[0]=res.getString("nama_barang");
-                obj[1]=res.getString("harga");
-                obj[2]=res.getString("stok");
+                Object[] obj=new Object[4];
+                obj[0]=res.getString("id_barang");
+                obj[1]=res.getString("nama_barang");
+                obj[2]=res.getString("harga");
+                obj[3]=res.getString("stok");
                 
                 
                
@@ -71,7 +72,7 @@ public class databarang extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id_barang", "nama_barang", "harga", "gambar_barang"
+                "id_barang", "nama_barang", "harga", "stok"
             }
         ) {
             Class[] types = new Class [] {
