@@ -9,7 +9,6 @@ package Koneksi;
  *
  * @author Virda
  */
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -20,7 +19,7 @@ public class koneksi {
     
     public Connection getData (){
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost/uhuy","root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/danusan","root", "");
         }
         
         catch (Exception e){
