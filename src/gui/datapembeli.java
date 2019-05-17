@@ -25,21 +25,19 @@ public class datapembeli extends javax.swing.JFrame {
     public void tampilan (){
        DefaultTableModel model = (DefaultTableModel)  tabel.getModel();
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/doi", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/uhuy", "root", "");
             Statement stat = conn.createStatement();
             ResultSet res = stat.executeQuery("Select * from pembeli");
             System.out.println("");
             while(res.next()){
-                Object[] obj=new Object[8];
+                Object[] obj=new Object[5];
                 System.out.println(res.getString("nama_pembeli"));
                 obj[0]=res.getString("id_pembeli");
-                obj[1]=res.getString("username");
-                obj[2]=res.getString("password");
-                obj[3]=res.getString("nama_pembeli");
+                obj[1]=res.getString("nama_pembeli");
+                obj[2]=res.getString("username");
+                obj[3]=res.getString("password");
                 obj[4]=res.getString("jk");
-                obj[5]=res.getString("lokasi");
-                obj[6]=res.getString("prodi");
-                obj[7]=res.getString("angkatan");
+                
                 
                 model.addRow(obj);
             }
@@ -69,11 +67,11 @@ public class datapembeli extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id_pembeli", "ussername", "password", "nama_pembeli", "jk", "lokasi", "prodi", "angkatan"
+                "id_pembeli", "ussername", "password", "nama_pembeli", "jk"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
