@@ -1,4 +1,7 @@
 
+import gui.Admin;
+import gui.PembeliUtama;
+import gui.Penjual;
 import gui.login;
 
 /*
@@ -18,10 +21,14 @@ public class Main {
 
         
     
-        login a = new login();
+        Admin a = new Admin();
         a.setVisible(true);
         
+        PembeliUtama b = new PembeliUtama();
+        b.setVisible(true);
         
+        Penjual c = new Penjual();
+        c.setVisible(true);
     }
     
 }
