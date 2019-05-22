@@ -269,7 +269,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
     }//GEN-LAST:event_jbcancelActionPerformed
 
     private void jbdoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbdoneActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jbdoneActionPerformed
 
     private void jbinsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbinsertActionPerformed
