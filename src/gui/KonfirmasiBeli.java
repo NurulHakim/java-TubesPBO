@@ -113,7 +113,9 @@ public class KonfirmasiBeli extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
         
-        
+        Penjual x = new Penjual();
+        x.setVisible(true);
+        this.setVisible(false);
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
