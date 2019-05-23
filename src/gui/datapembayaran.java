@@ -29,7 +29,7 @@ public class datapembayaran extends javax.swing.JFrame {
      public void tampilan (){
        DefaultTableModel model = (DefaultTableModel)  pembayaran.getModel();
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/uhuy", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/danusan", "root", "");
             Statement stat = conn.createStatement();
             ResultSet res = stat.executeQuery("Select * from pembayaran");
             System.out.println("");
@@ -69,7 +69,7 @@ public class datapembayaran extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id_pembayaran", "id_barang", "total_harga"
+                "username_penjual", "username_pembeli", "jumlah beli"
             }
         ) {
             Class[] types = new Class [] {
@@ -89,7 +89,7 @@ public class datapembayaran extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Tabel Pembayaran");
+        jLabel1.setText("Tabel Transaksi");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
