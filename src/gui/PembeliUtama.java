@@ -6,10 +6,14 @@
 package gui;
 
 import Koneksi.koneksi;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -33,12 +37,14 @@ public class PembeliUtama extends javax.swing.JFrame {
         uhuy.setModel(model);
         
        // model.addColumn("ID Produk");
-        model.addColumn("Nama Produk");
+        model.addColumn("NamaProduk");
         model.addColumn("Harga");
         model.addColumn("Stok");
         
         getDatabase();
     }
+    
+    
     
     public void getDatabase(){
         //menghapus statement pemanggilan data pada tabel produk dari database
@@ -83,6 +89,10 @@ public class PembeliUtama extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         uhuy = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        namabarang = new javax.swing.JTextField();
+        harga = new javax.swing.JTextField();
+        jumlahbeli = new javax.swing.JTextField();
+        totalharga = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -114,9 +124,14 @@ public class PembeliUtama extends javax.swing.JFrame {
         ));
         uhuy.setAlignmentX(1.0F);
         uhuy.setAlignmentY(1.0F);
+        uhuy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                uhuyMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(uhuy);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 450, 90));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 450, 90));
 
         jButton1.setText("Beli");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +139,11 @@ public class PembeliUtama extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 282, -1, 20));
+        getContentPane().add(namabarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 130, -1));
+        getContentPane().add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 130, -1));
+        getContentPane().add(jumlahbeli, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 130, -1));
+        getContentPane().add(totalharga, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 130, -1));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pembeli/20190515_215913_0001.png"))); // NOI18N
@@ -138,8 +157,24 @@ public class PembeliUtama extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         dispose();
-        new KonfirmasiBeli().show();
+        JOptionPane.showMessageDialog(null, "Pesanan di proses ;')");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void uhuyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_uhuyMouseClicked
+        // TODO add your handling code here:
+        //tambahan
+        
+        int baris = jTable1.rowAtPoint(evt.getPoint());
+        
+        String nama_barang =jTable1.getValueAt(baris, 0).toString();
+        namabarang.setText(nama_barang);
+        String Harga = jTable1.getValueAt(baris,1).toString();
+        harga.setText(Harga);
+        String jumlahBeli = jTable1.getValueAt(baris,2).toString();
+        jumlahbeli.setText(jumlahBeli);
+        String totalHarga = jTable1.getValueAt(baris,2).toString();
+        totalharga.setText(totalHarga);
+    }//GEN-LAST:event_uhuyMouseClicked
 
     /**
      * @param args the command line arguments
@@ -177,11 +212,15 @@ public class PembeliUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField harga;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jumlahbeli;
+    private javax.swing.JTextField namabarang;
+    private javax.swing.JTextField totalharga;
     private javax.swing.JTable uhuy;
     // End of variables declaration//GEN-END:variables
 }
