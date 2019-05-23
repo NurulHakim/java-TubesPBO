@@ -53,7 +53,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
             kon.getData();
             
             Statement stat = (Statement) kon.getData().createStatement();
-            String sql = "Select * from jualan";
+            String sql = "Select * from barang";
             ResultSet rs = stat.executeQuery(sql);
             
             while (rs.next()){
@@ -240,7 +240,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
              koneksi kon = new koneksi();
              kon.getData();
              
-            String sql ="delete from jualan where Nama_menu ='"+jtmenu.getText()+"'";
+            String sql ="delete from barang where Nama_menu ='"+jtmenu.getText()+"'";
             PreparedStatement p = (PreparedStatement) kon.getData().prepareStatement(sql);
             p.execute();
             JOptionPane.showMessageDialog(this, "berhasil di hapus");
@@ -277,7 +277,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
         try {
             koneksi kon = new koneksi();
             
-            String sql = "INSERT INTO jualan VALUES ('"+jtmenu.getText()+"','"
+            String sql = "INSERT INTO barang VALUES ('"+jtmenu.getText()+"','"
                                                     +jtstok.getText()+"','"
                                                     +jtharga.getText()+"')";
             
@@ -316,7 +316,7 @@ public class EditDaftarJualan extends javax.swing.JFrame {
             koneksi kon = new koneksi();
             kon.getData();
             
-            String sql ="UPDATE jualan SET Stok = '"+jtstok.getText()+
+            String sql ="UPDATE barang SET Stok = '"+jtstok.getText()+
                         "', Harga = '"+jtharga.getText()+
                         "' WHERE Nama_menu = '"+jtmenu.getText()+"'";
             PreparedStatement pst=kon.getData().prepareStatement(sql);
